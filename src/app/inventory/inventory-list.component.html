@@ -23,7 +23,7 @@
   <div >
     <h2>Inventory List</h2>
   </div>
-  <div *ngIf="!inventorylist;else elseBlock">
+  <div>
     <table>
       <title>Inventory List</title>
       <thead>
@@ -42,7 +42,6 @@
       </tbody>
     </table>
   </div>
-  <ng-template #elseBlock>No Record Exist! OR server is down Please contact administrator!</ng-template>
 </div>
 
 </html>
