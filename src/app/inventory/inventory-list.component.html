@@ -1,0 +1,47 @@
+<html>
+<style>
+
+  table {
+    border-collapse: collapse;
+    border: 1px solid black;
+  }
+  th, td {
+    border: 1px solid black;
+    width:20%
+  }
+  table#table1 {
+    table-layout: auto;
+    width: 100%;
+  }
+
+  h1 {
+    color:green;
+  }
+
+</style>
+<div  align="center">
+  <div >
+    <h2>Inventory List</h2>
+  </div>
+  <div >
+    <table>
+      <title>Inventory List</title>
+      <thead>
+      <tr>
+        <th>SKU</th>
+        <th>Name</th>
+        <th>Count</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let inventory of inventorylist | async">
+        <td>{{inventory.sku}}</td>
+        <td>{{inventory.name}}</td>
+        <td align="right">{{inventory.count}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</html>
